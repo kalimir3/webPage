@@ -1,0 +1,33 @@
+{
+    "properties" : [{
+        "id" : "1",
+        "nazov" : "Krasny dom so zahradou",
+        "cena" : "99990",
+        "pozemok" : "45",
+        "rozloha" : "30"
+    },{
+        "id" : "2",
+        "nazov" : "Krasny dom so zahradou",
+        "cena" : "99990",
+        "pozemok" : "75",
+        "rozloha" : "100"
+    },{
+        "id" : "3",
+        "nazov" : "Krasny dom so zahradou",
+        "cena" : "99990",
+        "pozemok" : "75",
+        "rozloha" : "50"
+    },{
+        "id" : "4",
+        "nazov" : "Krasny dom so zahradou",
+        "cena" : "49000",
+        "pozemok" : "100",
+        "rozloha" : "99"
+    },{
+        "id" : "5",
+        "nazov" : "Krasny dom so zahradou",
+        "cena" : "9900",
+        "pozemok" : "75",
+        "rozloha" : "100"
+    }]
+}

@@ -1,0 +1,88 @@
+.headerContainer {
+    position: fixed;
+    top:0%;
+    left:0%;
+    width: 100%;
+    height: 30px;
+    background-color: red;
+    transition: 1s;
+}
+
+.headerContainer:hover .categoryContainer{
+    top: 0px;
+}
+
+.headerContainer:hover {
+    height: 100px;
+}
+
+.headerContainer:hover + #content {
+    top: 130px;
+}
+
+.headerContainer:hover .logoContainer {
+    height: 100%;
+}
+
+.headerContainer:hover  #kontakt {
+    top:0px
+}
+
+.categoryContainer {
+    z-index: 6;
+    position: fixed; 
+    height: 128px;
+    width: 128px;
+    top:-130px;
+    transition: 1s;
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+.nonBlueLink {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#kontakt {
+    position: relative;
+    top: -30px;
+    height: 30px;
+    margin: auto;
+    z-index: 1;
+    transition: 1s;
+    background-color: red;
+}
+
+.logoContainer {
+    position: relative;
+    vertical-align: middle;
+    height: 100%;
+    background-color: red;
+    z-index: 5;
+    transition: 1s;
+}
+
+.logo {
+    max-width: 128px;
+    max-height: 128px;
+    max-height: 100%;
+    height: 100%;
+    z-index: 4;
+    transition: 1s;
+}
+
+#content {
+    position: fixed;
+    top:30px;
+    transition: 1s;
+    width: 100%;
+    padding: 5px;
+}
