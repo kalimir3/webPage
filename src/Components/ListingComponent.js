@@ -9,7 +9,7 @@ export default function ListingComponent(props) {
         <Row xs="1" md="2" lg="4">
           {props.listings.map(listing => {
             return (
-              <Col>
+              <Col className="padding" key={listing.id}>
                 <Listing listing={listing}></Listing>
               </Col>
             );
@@ -23,7 +23,6 @@ export default function ListingComponent(props) {
 }
 
 function Listing(props) {
-  console.log(props)
     return (
     <div className="listing">
       <div>{props.listing.nazov}</div>

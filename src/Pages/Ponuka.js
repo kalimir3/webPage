@@ -1,23 +1,29 @@
-import {Container, Row, Col} from 'reactstrap'
 import React from 'react'
 import Filter from '../Components/Filter'
 import ListingComponent from '../Components/ListingComponent'
 import listings from '../data/listings.json'
 
 export default class Ponuka extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
-                listings: listings.properties
-            }
+            listings: listings.properties,
+            filter: null
         }
+    }
 
-    render(){
+    getFilter = (filter) => {
+        this.setState({filter: filter})
+        
+    }
 
+    render() {
         return (
-        <div><Filter></Filter>
-        <ListingComponent listings={this.state.listings}></ListingComponent>
-        </div>
+            <div>
+                <Filter getFilter={this.getFilter}></Filter>
+                {console.log(this.state.filter)}
+                <ListingComponent listings={this.state.listings}></ListingComponent>
+            </div>
         )
     }
 }

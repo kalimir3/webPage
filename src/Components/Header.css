@@ -8,20 +8,16 @@
     transition: 1s;
 }
 
-.headerContainer:hover .categoryContainer{
-    top: 0px;
-}
-
 .headerContainer:hover {
     height: 100px;
 }
 
-.headerContainer:hover + #content {
-    top: 130px;
+.headerContainer:hover .categoryContainer{
+    top: 0px;
 }
 
-.headerContainer:hover .logoContainer {
-    height: 100%;
+.headerContainer:hover + #content {
+    top: 130px;
 }
 
 .headerContainer:hover  #kontakt {

@@ -15,9 +15,9 @@ export default class Filter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cenaDo: null,
-      minRozloha: null,
-      minPozemok: null,
+      cenaDo: "",
+      minRozloha: "",
+      minPozemok: "",
       balkon: false
     };
   }
@@ -26,6 +26,32 @@ export default class Filter extends React.Component {
     this.setState({
       balkon: !this.state.balkon
     });
+    this.filterCallback()
+  }
+
+  cenaDo = event => {
+    this.setState({
+      cenaDo: event.target.value
+    })
+    this.filterCallback()
+  }
+
+  minRozloha = event => {
+    this.setState({
+      minRozloha: event.target.value
+    })
+    this.filterCallback()
+  }
+
+  minPozemok = event => {
+    this.setState({
+      minPozemok: event.target.value
+    })
+    this.filterCallback()
+  }
+
+  filterCallback = () => {
+    this.props.getFilter(this.state)
   }
 
   render() {
@@ -34,7 +60,7 @@ export default class Filter extends React.Component {
         <Row xs="2" md="4" lg="6">
           <Col className="padding">
             <InputGroup>
-              <Input placeholder="Max cena" />
+              <Input onChange={this.cenaDo} value={this.state.cenaDo} placeholder="Max cena"/>
               <InputGroupAddon addonType="append">
                 <InputGroupText>€</InputGroupText>
               </InputGroupAddon>
@@ -42,7 +68,7 @@ export default class Filter extends React.Component {
           </Col>
           <Col className="padding">
             <InputGroup>
-              <Input placeholder="Min. rozloha" />
+              <Input onChange={this.minRozloha} placeholder="Min. rozloha" />
               <InputGroupAddon addonType="append">
                 <InputGroupText>m2</InputGroupText>
               </InputGroupAddon>
@@ -50,39 +76,34 @@ export default class Filter extends React.Component {
           </Col>
           <Col className="padding">
             <InputGroup>
-              <Input placeholder="Min. pozemok" />
+              <Input onChange={this.minPozemok} placeholder="Min. pozemok" />
               <InputGroupAddon addonType="append">
                 <InputGroupText>m2</InputGroupText>
               </InputGroupAddon>
             </InputGroup>
           </Col>
           <Col className="padding">
-            <Row className="noMargin">
-              <InputGroupAddon className="label" addonType="prepend">
-                Balkon:
-              </InputGroupAddon>
-              {this.state.balkon ? (
-                <Button
-                  className="label"
-                  onClick={() => this.switchBalkon()}
-                  color="secondary"
-                >
-                  Chcem
+            {this.state.balkon ? (
+              <Button
+                className="label"
+                onClick={() => this.switchBalkon()}
+                color="secondary"
+              >
+                Chcem balkon
                 </Button>
-              ) : (
+            ) : (
                 <Button
                   className="label"
                   onClick={() => this.switchBalkon()}
                   outline
                   color="secondary"
                 >
-                  Netreba
+                  Balkon nemusi
                 </Button>
               )}
-            </Row>
           </Col>
         </Row>
-      </Container>
+      </Container >
     );
   }
 }

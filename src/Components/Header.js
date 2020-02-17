@@ -14,7 +14,7 @@ export default function Header(props) {
       <div className="headerContainer">
         <div className="logoContainer">
           <Link to="/">
-            <img className="logo" src={logo}></img>
+            <img className="logo" alt={logo} src={logo}></img>
           </Link>
         </div>
         <div id="kontakt">
@@ -25,13 +25,13 @@ export default function Header(props) {
 
         <div className="categoryContainer">
           <Link to="/ponuka">
-            <img className="logo" src={logo}></img>
+            <img className="logo" alt={logo} src={logo}></img>
           </Link>
         </div>
 
         <div className="categoryContainer right">
           <Link to="/dopyt">
-            <img className="logo" src={logo}></img>
+            <img className="logo" alt={logo} src={logo}></img>
           </Link>
         </div>
       </div>
