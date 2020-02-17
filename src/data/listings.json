@@ -1,10 +1,10 @@
 {
     "properties" : [{
         "id" : "1",
-        "nazov" : "Krasny dom so zahradou",
+        "nazov" : "Prvy dom",
         "cena" : "99990",
-        "pozemok" : "45",
-        "rozloha" : "30"
+        "pozemok" : "150",
+        "rozloha" : "150"
     },{
         "id" : "2",
         "nazov" : "Krasny dom so zahradou",
@@ -13,21 +13,22 @@
         "rozloha" : "100"
     },{
         "id" : "3",
-        "nazov" : "Krasny dom so zahradou",
-        "cena" : "99990",
-        "pozemok" : "75",
-        "rozloha" : "50"
+        "nazov" : "Byt v centre",
+        "cena" : "89000",
+        "rozloha" : "150",
+        "balkon" : false
     },{
         "id" : "4",
-        "nazov" : "Krasny dom so zahradou",
-        "cena" : "49000",
-        "pozemok" : "100",
-        "rozloha" : "99"
+        "nazov" : "Lepsi byt v centre",
+        "cena" : "99000",
+        "pozemok" : "1",
+        "rozloha" : "120",
+        "balkon" : true
     },{
         "id" : "5",
-        "nazov" : "Krasny dom so zahradou",
-        "cena" : "9900",
+        "nazov" : "Dom so zahradou",
+        "cena" : "39900",
         "pozemok" : "75",
-        "rozloha" : "100"
+        "rozloha" : "120"
     }]
 }

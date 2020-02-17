@@ -26,9 +26,10 @@ function Listing(props) {
     return (
     <div className="listing">
       <div>{props.listing.nazov}</div>
-      <div>{props.listing.cena}</div>
-      <div>{props.listing.rozloha}</div>
-      <div>{props.listing.pozemok}</div>
+      <div>Cena: {props.listing.cena}€</div>
+      <div>Rozloha: {props.listing.rozloha}</div>
+      <div>Pozemok: {props.listing.pozemok}</div>
+      {props.listing.balkon ? <div>Balkon: Ano</div> : ""}
     </div>
   );
 }

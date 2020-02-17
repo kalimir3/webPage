@@ -22,37 +22,48 @@ export default class Filter extends React.Component {
     };
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if(this.state!==prevState) {
+      this.filterCallback()
+    }
+  }
+
   switchBalkon() {
-    this.setState({
-      balkon: !this.state.balkon
-    });
-    this.filterCallback()
+    this.setState(
+      {
+        balkon: !this.state.balkon
+      }
+    );
   }
 
   cenaDo = event => {
-    this.setState({
-      cenaDo: event.target.value
-    })
-    this.filterCallback()
-  }
+    this.setState(
+      {
+        cenaDo: event.target.value
+      },
+    )
+  };
 
   minRozloha = event => {
-    this.setState({
-      minRozloha: event.target.value
-    })
-    this.filterCallback()
-  }
+    this.setState(
+      {
+        minRozloha: event.target.value
+      },
+    )
+  };
 
   minPozemok = event => {
-    this.setState({
-      minPozemok: event.target.value
-    })
-    this.filterCallback()
-  }
+    this.setState(
+      {
+        minPozemok: event.target.value
+      },
+    )
+  };
 
   filterCallback = () => {
-    this.props.getFilter(this.state)
-  }
+    this.props.getFilter(this.state);
+    console.log(this.state)
+  };
 
   render() {
     return (
@@ -60,7 +71,11 @@ export default class Filter extends React.Component {
         <Row xs="2" md="4" lg="6">
           <Col className="padding">
             <InputGroup>
-              <Input onChange={this.cenaDo} value={this.state.cenaDo} placeholder="Max cena"/>
+              <Input
+                onChange={this.cenaDo}
+                value={this.state.cenaDo}
+                placeholder="Max cena"
+              />
               <InputGroupAddon addonType="append">
                 <InputGroupText>€</InputGroupText>
               </InputGroupAddon>
@@ -90,20 +105,20 @@ export default class Filter extends React.Component {
                 color="secondary"
               >
                 Chcem balkon
-                </Button>
+              </Button>
             ) : (
-                <Button
-                  className="label"
-                  onClick={() => this.switchBalkon()}
-                  outline
-                  color="secondary"
-                >
-                  Balkon nemusi
-                </Button>
-              )}
+              <Button
+                className="label"
+                onClick={() => this.switchBalkon()}
+                outline
+                color="secondary"
+              >
+                Balkon nemusi
+              </Button>
+            )}
           </Col>
         </Row>
-      </Container >
+      </Container>
     );
   }
 }
