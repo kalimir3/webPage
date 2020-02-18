@@ -5,6 +5,7 @@ import Ponuka from "../Pages/Ponuka.js";
 import Dopyt from "../Pages/Dopyt.js";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Container } from "reactstrap";
 
 export default function Header(props) {
   let telNumber = `tel:${props.telNumber}`;
@@ -35,7 +36,7 @@ export default function Header(props) {
           </Link>
         </div>
       </div>
-      <div id="content">
+      <Container id="content">
         <Switch>
           <Route path="/ponuka">
             <Ponuka />
@@ -45,7 +46,7 @@ export default function Header(props) {
           </Route>
           <Route path="/"></Route>
         </Switch>
-      </div>
+      </Container>
     </Router>
   );
 }

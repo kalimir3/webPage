@@ -2,6 +2,8 @@ import React from "react";
 import Filter from "../Components/Filter";
 import ListingComponent from "../Components/ListingComponent";
 import database from "../firebase";
+import {Container} from 'reactstrap'
+import '../App.css'
 
 export default class Ponuka extends React.Component {
   constructor(props) {
@@ -36,18 +38,16 @@ export default class Ponuka extends React.Component {
     }
   }
 
-
-
   getFilter = filter => {
     this.setState({ filter: filter });
   };
 
   render() {
     return (
-      <div>
+      <Container>
         <Filter getFilter={this.getFilter}></Filter>
         <ListingComponent listings={this.state.listings}></ListingComponent>
-      </div>
+      </Container>
     );
   }
 

@@ -67,8 +67,7 @@ export default class Filter extends React.Component {
 
   render() {
     return (
-      <Container className="filterContainer">
-        <Row xs="2" md="4" lg="6">
+        <Row className="filterContainer" xs="2" md="4" lg="6">
           <Col className="padding">
             <InputGroup>
               <Input
@@ -118,7 +117,6 @@ export default class Filter extends React.Component {
             )}
           </Col>
         </Row>
-      </Container>
     );
   }
 }
