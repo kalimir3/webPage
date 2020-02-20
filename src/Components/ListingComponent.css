@@ -1,3 +1,9 @@
+.listingContainer {
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+}
+
 .listing {
     border-radius: 5px;
     border-style: solid;
@@ -19,8 +25,4 @@
     border-radius: 5px;
     border-width: 1px;
     z-index: 3;
-}
-
-.container {
-overflow: auto;
 }

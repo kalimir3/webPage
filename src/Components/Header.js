@@ -36,7 +36,7 @@ export default function Header(props) {
           </Link>
         </div>
       </div>
-      <Container id="content">
+      <Container fluid={true} id="content">
         <Switch>
           <Route path="/ponuka">
             <Ponuka />

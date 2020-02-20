@@ -10,7 +10,7 @@ export default function ListingComponent(props) {
       console.log(property);
     }
     return (
-        <Row className="m-2 container">
+        <Row className="m-1 p-1 listingContainer">
           {props.listings.map(listing => {
             return (
               <Col

@@ -1,15 +1,25 @@
 import React from "react";
-import "./Footer.css"
+import "./Footer.css";
+import { Col, Row } from "reactstrap";
 
 export default function Footer() {
   return (
     <div className="footerContainer">
       <div className="footerHeader">Chcete nas navstivit?</div>
-      <div className="footerBody">
-            <div className="footerElement">Tu bude obrazok</div>
-            <div className="footerElement">Tu bude adresa</div>
-            <div className="footerElement">osledna kategoria: Kontaktujte nas FB?</div>
-      </div>
+      <Row className="px-3 footerBody">
+        <Col sm="12" lg="8" >
+          <Row>
+            <Col  sm="9">Mapa</Col>
+            <Col  sm="3">Adresa text </Col>
+          </Row>
+        </Col>
+        <Col  sm="6" lg="4">
+          Tu bude preklik na "nas tim"
+        </Col>
+        <Col  sm="6" lg="12">
+          osledna kategoria: Kontaktujte nas FB?
+        </Col>
+      </Row>
     </div>
   );
 }

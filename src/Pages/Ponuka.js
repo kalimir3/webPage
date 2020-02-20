@@ -2,7 +2,7 @@ import React from "react";
 import Filter from "../Components/Filter";
 import ListingComponent from "../Components/ListingComponent";
 import database from "../firebase";
-import {Container} from 'reactstrap'
+import {Col} from 'reactstrap'
 import '../App.css'
 
 export default class Ponuka extends React.Component {
@@ -44,10 +44,10 @@ export default class Ponuka extends React.Component {
 
   render() {
     return (
-      <Container>
+      <Col sm="12">
         <Filter getFilter={this.getFilter}></Filter>
         <ListingComponent listings={this.state.listings}></ListingComponent>
-      </Container>
+      </Col>
     );
   }
 
