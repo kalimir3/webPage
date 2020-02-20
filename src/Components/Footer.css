@@ -1,0 +1,42 @@
+.footerContainer {
+    position: absolute;
+    bottom: 5px;
+    left: calc(50% - 50px);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: red;
+    transition: 1s;
+}
+
+.footerContainer:hover {
+    left: 2%;
+    height: calc(100% - 100px);
+    width: 96%;
+    border-radius: 50px;
+}
+
+.footerHeader {
+    vertical-align: bottom;
+}
+
+.footerContainer:hover .footerHeader {
+    display: none;
+}
+
+.footerBody {
+    opacity: 0;
+    height: 0px;
+    transition: 1s;
+}
+.footerContainer:hover .footerBody {
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    bottom: 0px;
+}
+
+.footerElement {
+    width: 100%;
+    height: 33%;
+}
