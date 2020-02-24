@@ -6,7 +6,6 @@ export default function ListingComponent(props) {
   const [property, setProperty] = useState(null);
 
   if (props.listings) {
-    console.log(property);
     return (
         <Row className="m-1 p-1 listingContainer">
           {props.listings.map(listing => {
