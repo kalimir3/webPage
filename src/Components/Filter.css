@@ -1,6 +1,6 @@
 .filterContainer {
     border-radius: 5px;
-    border-style: solid;
+
     border-width: 3px;
     margin: 5px;
 }
@@ -15,4 +15,11 @@
 
 .noMargin {
     margin: 0px !important;
+}
+
+.filterItem {
+    box-shadow:
+    10px 10px 5px rgba(0, 0, 0, 0.075),
+10px 10px 10px rgba(0, 0, 0, 0.15)
+  ;
 }

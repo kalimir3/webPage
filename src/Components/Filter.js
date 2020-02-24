@@ -1,12 +1,9 @@
 import React from "react";
 import {
-  Container,
   Row,
   Col,
   InputGroup,
-  InputGroupAddon,
   Input,
-  InputGroupText,
   Button
 } from "reactstrap";
 import "./Filter.css";
@@ -67,39 +64,30 @@ export default class Filter extends React.Component {
 
   render() {
     return (
-        <Row className="filterContainer" xs="2" md="4" lg="6">
+        <Row className="filterContainer p-3" xs="2" md="4" lg="6">
           <Col className="padding">
             <InputGroup>
-              <Input
+              <Input className="filterItem"
                 onChange={this.cenaDo}
                 value={this.state.cenaDo}
-                placeholder="Max cena"
+                placeholder="Max cena v €"
               />
-              <InputGroupAddon addonType="append">
-                <InputGroupText>€</InputGroupText>
-              </InputGroupAddon>
             </InputGroup>
           </Col>
           <Col className="padding">
             <InputGroup>
-              <Input onChange={this.minRozloha} placeholder="Min. rozloha" />
-              <InputGroupAddon addonType="append">
-                <InputGroupText>m2</InputGroupText>
-              </InputGroupAddon>
+              <Input className="filterItem" onChange={this.minRozloha} placeholder="Min. rozloha v m2" />
             </InputGroup>
           </Col>
           <Col className="padding">
             <InputGroup>
-              <Input onChange={this.minPozemok} placeholder="Min. pozemok" />
-              <InputGroupAddon addonType="append">
-                <InputGroupText>m2</InputGroupText>
-              </InputGroupAddon>
+              <Input className="filterItem" onChange={this.minPozemok} placeholder="Min. pozemok v m2" />
             </InputGroup>
           </Col>
           <Col className="padding">
             {this.state.balkon ? (
               <Button
-                className="label"
+                className="label filterItem"
                 onClick={() => this.switchBalkon()}
                 color="secondary"
               >
@@ -107,7 +95,7 @@ export default class Filter extends React.Component {
               </Button>
             ) : (
               <Button
-                className="label"
+                className="label filterItem"
                 onClick={() => this.switchBalkon()}
                 outline
                 color="secondary"

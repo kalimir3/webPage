@@ -5,18 +5,22 @@
     left: calc(50% - 50px);
     height: 100px;
     width: 100px;
-    border-width: 2px;
+    border-width: 3px;
     border-color: black;
     border-style: solid;
     border-radius: 50%;
-    background-color: red;
+    background-image: linear-gradient(#f20006, #8c0003, #f20006);
     transition: 1s;
+    box-shadow:
+    0 7.5px 5px rgba(0, 0, 0, 0.075),
+    0 60px 40px rgba(0, 0, 0, 0.15)
+  ;
     
 }
 
 .footerContainer:hover {
     left: 2%;
-    height: calc(100% - 100px);
+    height: calc(100% - 55px);
     width: 96%;
     border-radius: 50px;
 }

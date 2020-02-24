@@ -6,19 +6,16 @@ export default function ListingComponent(props) {
   const [property, setProperty] = useState(null);
 
   if (props.listings) {
-    {
-      console.log(property);
-    }
+    console.log(property);
     return (
         <Row className="m-1 p-1 listingContainer">
           {props.listings.map(listing => {
             return (
-              <Col
+              <Col className="p-4" 
                 xs="12"
                 md="6"
-                lg="3"
+                lg="4"
                 onClick={() => setProperty(listing)}
-                className="p-1"
                 key={listing.id}
               >
                 <Listing listing={listing}></Listing>
