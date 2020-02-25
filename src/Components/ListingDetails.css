@@ -1,0 +1,13 @@
+.listingDetails {
+    min-width: 90%;
+    opacity: 1;
+    z-index: 3;
+}
+
+.listingDetailsTheme {
+    background-color: #e6e6e6;
+}
+
+.listingBody {
+    min-height: 100%;
+}

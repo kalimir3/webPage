@@ -7,7 +7,7 @@ import googleMap from "../img/kontaktGoogleMap.png";
 export default function Footer() {
   return (
     <div className="footerContainer">
-      <div className="footerHeader">Chcete nas navstivit?</div>
+      <div className="footerHeader">Kontaktujte nas</div>
       <Row className="px-3 footerBody">
         <Col sm="12" lg="8">
           <Row>

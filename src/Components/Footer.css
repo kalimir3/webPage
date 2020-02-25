@@ -28,6 +28,8 @@
 .footerHeader {
     height: 100%;
     text-align: center;
+    color: white;
+    font-weight: bolder;
 }
 
 .footerContainer:hover .footerHeader {
