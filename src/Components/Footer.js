@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <div className="footerContainer">
       <div className="footerHeader">Kontaktujte nas</div>
-      <Row className="px-3 footerBody">
+      <Row className="px-1 footerBody">
         <Col sm="12" lg="8">
           <Row>
             <Col sm="9">

@@ -2,11 +2,6 @@ import React, { useState } from "react";
 import {
   Row,
   Col,
-  Carousel,
-  CarouselControl,
-  CarouselItem,
-  CarouselCaption,
-  UncontrolledCarousel,
   Container
 } from "reactstrap";
 import "./ListingComponent.css";
@@ -74,13 +69,7 @@ export default function ListingComponent(props) {
     return (
         <Row className="m-1 p-1 listingContainer">
           <Col xs="12" lg="8">
-            <UncontrolledCarousel
-              items={items}
-              indicators={false}
-              controls={false}
-              autoPlay={false}
-              className="myCarousel"
-            />
+            <img className="listingPic" src={items[0].src} alt="myPic"></img>
           </Col>
           <Col
             xs="12"

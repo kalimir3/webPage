@@ -6,6 +6,8 @@ import Dopyt from "../Pages/Dopyt.js";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Container } from "reactstrap";
+import KontaktCardComponent from "./KontaktCardComponent";
+import Cennik from "./Cennik";
 
 export default function Header(props) {
   let telNumber = `tel:${props.telNumber}`;
@@ -44,7 +46,10 @@ export default function Header(props) {
           <Route path="/dopyt">
             <Dopyt />
           </Route>
-          <Route path="/"></Route>
+          <Route path="/">
+            <KontaktCardComponent></KontaktCardComponent>
+            <Cennik></Cennik>
+          </Route>
         </Switch>
       </Container>
     </Router>
