@@ -6,8 +6,8 @@ import Dopyt from "../Pages/Dopyt.js";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Container } from "reactstrap";
-import KontaktCardComponent from "./KontaktCardComponent";
-import Cennik from "./Cennik";
+import KontaktCardComponent from "./Listings/KontaktCardComponent";
+import Cennik from "./Cennik/Cennik";
 
 export default function Header(props) {
   let telNumber = `tel:${props.telNumber}`;

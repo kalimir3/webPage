@@ -10,7 +10,7 @@ import {
   Table
 } from "reactstrap";
 import classnames from "classnames";
-import CennikItem from "./Cennik/CennikItem";
+import CennikItem from "./CennikItem";
 
 const cennikData = {
   predaj: [

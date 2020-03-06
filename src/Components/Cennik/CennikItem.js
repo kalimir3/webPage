@@ -6,10 +6,9 @@ export default function CennikItem (props) {
     const toggleTooltip = () => setTooltipOpen(!tooltipOpen);
     const key = `${props.id}`
     return(
-        <tr id={key}>
-            {console.log(props.id)}
+        <tr>
                 <td>{props.sluzba.nazov}</td>
-                <td>{props.sluzba.cena}</td>
+                <td id={key}>{props.sluzba.cena}</td>
                 <Tooltip placement="bottom" isOpen={tooltipOpen} target={key} toggle={toggleTooltip}>
           {props.sluzba.detail}
         </Tooltip>

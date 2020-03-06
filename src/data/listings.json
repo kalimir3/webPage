@@ -1,7 +1,6 @@
 {
     "properties" : [{
         "id" : "1",
-        "nazov" : "Prvy dom",
         "cena" : "99990",
         "pozemok" : "150",
         "rozloha" : "150"
