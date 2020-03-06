@@ -1,12 +1,8 @@
 import React, { useState } from "react";
-import {
-  Row,
-  Col,
-  Container
-} from "reactstrap";
+import { Row, Col } from "reactstrap";
 import "./ListingComponent.css";
-import ListingDetails from "./ListingDetails";
-import dom from "../img/dom.jpg";
+import ListingDetails from "./ListingDetails.js";
+import dom from "../../img/dom.jpg";
 
 export default function ListingComponent(props) {
   const [property, setProperty] = useState({});
@@ -40,25 +36,21 @@ export default function ListingComponent(props) {
 
   if (props.listings) {
     return (
-      <Container fluid={true}>
-        <Row className="listingsContainer">
+        <Row>
           {props.listings.map(listing => {
-            return (      <Col 
-              onClick={() => toggle(listing)}
-              xs="12"
-              lg="6"
-            >
-            <Listing listing={listing}></Listing>;
-            </Col>)
-          })};
-        </Row>
-        <ListingDetails
+            return (
+              <Col className="p-3 m-0" onClick={() => toggle(listing)} xs="12" lg="6">
+                <Listing listing={listing}></Listing>
+              </Col>
+            );
+          })}
+          <ListingDetails
           property={property}
           toggle={toggle}
           modal={modal}
           propertyPics={items}
         ></ListingDetails>
-      </Container>
+        </Row>
     );
   } else {
     return <div></div>;
@@ -67,22 +59,18 @@ export default function ListingComponent(props) {
   function Listing(props) {
     console.log(props);
     return (
-        <Row className="m-1 p-1 listingContainer">
-          <Col xs="12" lg="8">
-            <img className="listingPic" src={items[0].src} alt="myPic"></img>
-          </Col>
-          <Col
-            xs="12"
-            lg="4"
-            active={props.active}
-          >
-            <div>{props.listing.nazov}</div>
-            <div>Cena: {props.listing.cena}€</div>
-            <div>Rozloha: {props.listing.rozloha}</div>
-            <div>Pozemok: {props.listing.pozemok}</div>
-            {props.listing.balkon ? <div>Balkon: Ano</div> : ""}
-          </Col>
-        </Row>
+      <Row className="listingContainer m-0">
+        <Col className="p-0" xs="12" lg="8">
+          <img className="listingPic" src={items[0].src} alt="myPic"></img>
+        </Col>
+        <Col className="py-2" xs="12" lg="4" active={props.active}>
+          <div className="listingThumbnailHeader">{props.listing.nazov}</div>
+          <div>Cena: {props.listing.cena}€</div>
+          <div>Rozloha: {props.listing.rozloha}</div>
+          <div>Pozemok: {props.listing.pozemok}</div>
+          {props.listing.balkon ? <div>Balkon: Ano</div> : ""}
+        </Col>
+      </Row>
     );
   }
 }

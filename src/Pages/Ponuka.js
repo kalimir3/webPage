@@ -1,9 +1,9 @@
 import React from "react";
-import Filter from "../Components/Filter";
-import ListingComponent from "../Components/ListingComponent";
+import Filter from "../Components/Listings/Filter";
+import ListingComponent from "../Components/Listings/ListingComponent";
 import database from "../firebase";
-import {Col} from 'reactstrap'
-import '../App.css'
+import { Col } from "reactstrap";
+import "../App.css";
 
 export default class Ponuka extends React.Component {
   constructor(props) {
@@ -15,7 +15,8 @@ export default class Ponuka extends React.Component {
         cenaDo: null,
         minRozloha: null,
         minPozemok: null,
-        balkon: null
+        balkon: null,
+        obec: []
       }
     };
   }
@@ -51,17 +52,17 @@ export default class Ponuka extends React.Component {
     );
   }
 
-
   /**
-     * This is filter logic.
-    */
+   * This is filter logic.
+   */
 
-filterContent = () => {
-    let filtered = this.state.database.filter(listing =>
-      this.filterCena(listing) &&
-      this.filterPozemok(listing) &&
-      this.filterBalkon(listing) &&
-      this.filterRozloha(listing)
+  filterContent = () => {
+    let filtered = this.state.database.filter(
+      listing =>
+        this.filterCena(listing) &&
+        this.filterPozemok(listing) &&
+        this.filterBalkon(listing) &&
+        this.filterRozloha(listing)
     );
     return filtered;
   };
@@ -82,7 +83,7 @@ filterContent = () => {
       : true;
   };
 
-  filterPozemok = ({pozemok}) => {
+  filterPozemok = ({ pozemok }) => {
     return this.state.filter.minPozemok
       ? this.state.filter.minPozemok / 1 <= pozemok / 1
         ? true
@@ -93,5 +94,4 @@ filterContent = () => {
   filterBalkon = ({ balkon }) => {
     return !(!balkon && this.state.filter.balkon) ? true : false;
   };
-
 }

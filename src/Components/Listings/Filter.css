@@ -4,12 +4,9 @@
     border-width: 3px;
 }
 
-.padding {
-    padding: 2px !important;
-}
-
 .label {
     display: inline-block;
+    width: 100%;
 }
 
 .noMargin {
