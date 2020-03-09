@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Container } from "reactstrap";
 import KontaktCardComponent from "./Listings/KontaktCardComponent";
 import Cennik from "./Cennik/Cennik";
+import PonukaNavbar from "./PonukaNavbar";
 
 export default function Header(props) {
   let telNumber = `tel:${props.telNumber}`;
@@ -40,9 +41,13 @@ export default function Header(props) {
       </div>
       <Container fluid={true} id="content">
         <Switch>
-          <Route path="/ponuka">
+        <Route exact path="/ponuka">
             <Ponuka />
           </Route>
+          <Route path="/ponuka">
+            <PonukaNavbar></PonukaNavbar>
+          </Route>
+
           <Route path="/dopyt">
             <Dopyt />
           </Route>
