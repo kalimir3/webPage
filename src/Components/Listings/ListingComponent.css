@@ -1,9 +1,10 @@
 
 .listingContainer {
     box-shadow:
-  0 7.5px 5px rgba(0, 0, 0, 0.075),
-  0 60px 40px rgba(0, 0, 0, 0.35)
-;
+    1.3px 1.3px 1.3px rgba(0, 0, 0, 0.1),
+    5px 5px 10px rgba(0, 0, 0, 0.2)
+  ;
+  
 border-radius: 15px;
 background-color: white;
 }

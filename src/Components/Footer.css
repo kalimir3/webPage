@@ -31,6 +31,7 @@
     text-align: center;
     color: white;
     font-weight: bolder;
+    z-index: 1;
 }
 
 .footerContainer:hover .footerHeader {
@@ -41,8 +42,10 @@
     height: 100%;
     opacity: 0;
     transition: 1s;
+    z-index: 0;
 }
 .footerContainer:hover .footerBody {
+    z-index: 2;
     opacity: 1;
     bottom: 0px;
 }
